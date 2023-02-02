@@ -30,16 +30,16 @@
 #5
 
 
-import random
+# import random
 
 
-value = random.randint(1,10)
-guess = int(input("enter your guess :"))
-while(guess!=value):
-    if guess < value :
-        print("too low")
-        guess = int(input("enter your guess :"))        
-    else:
-        print("too high")
-        guess = int(input("enter your guess :"))
-print("you have guessed right!")
+# value = random.randint(1,10)
+# guess = int(input("enter your guess :"))
+# while(guess!=value):
+#     if guess < value :
+#         print("too low")
+#         guess = int(input("enter your guess :"))        
+#     else:
+#         print("too high")
+#         guess = int(input("enter your guess :"))
+# print("you have guessed right!")
