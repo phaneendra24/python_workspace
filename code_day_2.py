@@ -9,7 +9,7 @@
 # elif(n1<0 and n1%2==0):
 #     print("negative and even")
 # else:
-#     print("negative and odd")
+#     print("negative  odd")
     
 #  #2
 #  POS=int(input("enter a positive number"))
