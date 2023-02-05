@@ -1,0 +1,73 @@
+
+'''
+Designning a quiz game
+'''
+from colorama import Fore
+q1= '''
+how many goals did mbappe scored in the fifa world cup final?
+a:3
+b:5
+c:2 
+d:4
+'''
+q2= '''
+When was the Ashes first played?
+a:1872
+b:1877
+c:1882
+d:1887
+'''
+q3= '''
+Who won the first ever Cricket World Cup in 1975?
+a:Australia
+b:India
+c:pakistan
+d:west Indies
+'''
+q4= '''
+How many ways are there of batsman getting out in cricket?
+a:3
+b:10
+c:8
+d:9
+'''
+q5= '''
+What is the nickname of Sachin Tendulkar?
+a:The little Genius
+b:The little master
+c:The God of cricket
+d:Master Blaster
+'''
+
+questions = {q1:"a",q2:"d",q3:"d",q4:"b",q5:"b"}
+score = 0
+
+opt = "abcd"
+
+name = input(Fore.MAGENTA+"please enter your name : ")
+print(Fore.YELLOW + f"welcome to the quiz game {name}! ")
+
+for question in questions:
+    print(Fore.CYAN+ question)
+    q_skip = input(Fore.RED+"Do you want to skip the question(yes or no) :")
+
+    if q_skip.lower() =="yes":
+        continue
+    answer = input(Fore.YELLOW+"enter your answer :")
+
+    if(answer == questions[question]):
+        print(Fore.GREEN+"your answer is correct")
+        score+=1
+    elif (answer not in opt):
+        while(answer not in opt):
+            print(Fore.RED + "please enter appropriate choice!")
+            answer = input(Fore.YELLOW+"enter your answer :")
+            if(answer == questions[question]):
+                print(Fore.GREEN+"your answer is correct")
+                score+=1
+    
+    quit =  input(Fore.RED+"Do you want to quit the game  (yes or no): ")
+    if(quit.lower()== "yes"):
+        break
+
+print(f"your score is {score}")
