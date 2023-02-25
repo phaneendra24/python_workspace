@@ -283,19 +283,10 @@ Four pillars of OOPS-
 # obj1.child2()
 # obj1.sgrandchild1()
 
-# a => public 
-# _b => protected -can be accesed only where it is declared
-# __c => private
 
-# num  = input("enter your number :")
-# while(int(num)!=1):
-#     num = str(sum([int(i)*int(i) for i in num]))
-#     if(len(num)==1 and num != 1):
-#         print("Not happy number")
-#         break
-#     if(len(num)==1 and num ==1):
-#         print("happy number")
-#         break
+
+# happy number
+
 # num  = input("enter your number :")
 # while(int(num)!=1):
 #     num = str(sum([int(i)*int(i) for i in num]))
@@ -306,3 +297,48 @@ Four pillars of OOPS-
 #         break
 # if(int(num)==1):
 #     print("happy number")
+
+'''encapsulation'''
+# a => public 
+# _b => protected -can be accesed only where it is declared
+# __c => private
+
+# class ginger:
+#     _a =10
+#     __a =20
+#     def foo(self):
+#         print(self.__a)
+# zap = ginger()
+# protected
+# print(zap._a)
+# private
+# print(zap.__a)
+# zap.foo()
+
+
+''''
+Polymorphism - one item or two items used for different purpose
+Types-
+    1- overLoading 
+        - operator  overloading - addtion of numbers and additoin of strings 
+        - method overloading -eg: giving more or less parameters than required
+    2- Overriding - If a method is defective or cannot be used inside derived class it will 
+        take it from its base or parent class
+
+'''
+class parent():
+    def __init__(self) -> None:
+        self.value = "parent"
+    def foo (self):
+        print("parent")
+
+class child(parent):
+    def __init__(self) -> None:
+        self.value = "parent"
+    def foo (self):
+        print("child")
+
+obj1 = parent()    
+obj2 = child()    
+obj1.foo()
+obj2.foo()
